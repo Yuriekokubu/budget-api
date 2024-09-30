@@ -1,0 +1,19 @@
+### create
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "username": "u1004",
+    "password": "ativat",
+    "role": "ADMIN"
+}
+
+### create
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "username": "u1005",
+    "password": "tae",
+    "role": "USER"
+}
