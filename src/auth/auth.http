@@ -4,7 +4,7 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "username": "u1006",
+    "username": "u1009",
     "password": "tae"
 }
 
@@ -23,6 +23,6 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "username": "u1007",
-    "password": "tae"
+    "username": "u1009",
+    "password": "wrong"
 }
