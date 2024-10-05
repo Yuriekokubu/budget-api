@@ -5,12 +5,12 @@ import { LoggedInDto } from './dto/logged-in.dto';
 
 @Controller('auth')
 export class AuthController {
-  constructor(private readonly authService: AuthService) {}
+  constructor(private readonly authService: AuthService) { }
 
   @UseGuards(LocalAuthGuard)
   @Post('login')
-  login(@Request() request: { user : LoggedInDto }) {
+  login(@Request() request: { user: LoggedInDto }) {
     const access_token = this.authService.login(request.user)
-    return { access_token  };
+    return { access_token };
   }
 }
