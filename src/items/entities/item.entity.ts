@@ -1,10 +1,9 @@
-// item.entity.ts
+// item.entiry.ts
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 export enum ItemStatus {
   PENDING = 'PENDING', APPROVED = 'APPROVED', REJECTED = 'REJECTED'
 }
-
 
 @Entity()
 export class Item {
@@ -15,6 +14,11 @@ export class Item {
   @Column()
   title: string;
 
+  @Column({
+    nullable: true
+  })
+  description: string;
+
   @Column()
   amount: number;
 
@@ -22,16 +26,15 @@ export class Item {
   price: number;
 
   @Column({
-    nullable: true
+      nullable: true
   })
   contactMobileNo: string;
 
   @Column({
+    type: 'enum',
+    enum: ItemStatus,
     nullable: false,
     default: ItemStatus.PENDING
   })
   status: ItemStatus
-
-  @Column({ nullable: true })
-  newColumn: string;
 }

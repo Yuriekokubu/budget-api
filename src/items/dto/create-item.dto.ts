@@ -19,5 +19,9 @@ export class CreateItemDto {
     price: number;
 
     @IsOptional()
+    @IsString()
+    description?: string;
+
+    @IsOptional()
     contactMobileNo: string;
 }
